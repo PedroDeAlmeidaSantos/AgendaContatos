@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/image_contato"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_person"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:paddingTop="6dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_contato"/>
+            <TextView
+                android:id="@+id/txt_contato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bom dia Cia"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:maxLines="1"/>
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_phone"/>
+
+            <TextView
+                android:id="@+id/txt_telefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(11) 4002-8922"
+                android:textSize="16sp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_edit"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_edit"/>
+
+</LinearLayout>

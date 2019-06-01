@@ -18,6 +18,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import br.senai.sp.agendacontatos.R;
+import br.senai.sp.agendacontatos.adapter.ContatoAdapter;
 import br.senai.sp.agendacontatos.dao.ContatoDAO;
 import br.senai.sp.agendacontatos.modelo.Contato;
 
@@ -104,8 +105,9 @@ public class MainActivity extends AppCompatActivity {
         List<Contato> contatos = dao.getContatos();
         dao.close();
 
-        ArrayAdapter<Contato> listaFilmesAdapter = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
+        //ArrayAdapter<Contato> listaContatoAdapter = new ArrayAdapter<Contato>(this, android.R.layout.simple_list_item_1, contatos);
 
-        listaContato.setAdapter(listaFilmesAdapter);
+        ContatoAdapter adapter = new ContatoAdapter(this, contatos);
+        listaContato.setAdapter(adapter);
     }
 }

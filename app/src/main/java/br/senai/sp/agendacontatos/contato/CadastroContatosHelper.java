@@ -1,7 +1,10 @@
 package br.senai.sp.agendacontatos.contato;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.design.widget.TextInputLayout;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import br.senai.sp.agendacontatos.R;
 import br.senai.sp.agendacontatos.modelo.Contato;
@@ -15,6 +18,7 @@ public class CadastroContatosHelper {
     private EditText txtLinkedin;
     private TextInputLayout layout_txt_nome;
     private TextInputLayout layout_txt_telefone;
+    private ImageView foto;
     private Contato contato;
 
     public CadastroContatosHelper(CadastroContatosActivity activity){
@@ -26,6 +30,7 @@ public class CadastroContatosHelper {
         txtLinkedin = activity.findViewById(R.id.txt_linkedin);
         layout_txt_telefone = activity.findViewById(R.id.layout_txt_telefone);
         layout_txt_nome = activity.findViewById(R.id.layout_txt_nome);
+        foto = activity.findViewById(R.id.imageview_contato);
         contato = new Contato();
     }
 
@@ -35,6 +40,9 @@ public class CadastroContatosHelper {
         contato.setTelefone(txtTelefone.getText().toString());
         contato.setEmail(txtEmail.getText().toString());
         contato.setLinkedin(txtLinkedin.getText().toString());
+
+        Bitmap bm = ((BitmapDrawable) foto.getDrawable()).getBitmap();
+        Bitmap bitmapReduzido = Bitmap.createScaledBitmap(bm, 300, 300, true);
 
         return contato;
     }

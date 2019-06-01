@@ -1,6 +1,7 @@
 package br.senai.sp.agendacontatos.modelo;
 
 import java.io.Serializable;
+import java.sql.Blob;
 
 public class Contato implements Serializable{
     private int id;
@@ -9,6 +10,15 @@ public class Contato implements Serializable{
     private String telefone;
     private String email;
     private String linkedin;
+    private byte[] foto;
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
 
     public int getId() {
         return id;

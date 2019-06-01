@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".contato.CadastroContatosActivity"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/imageview_contato"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_person"/>
+
+            <ImageButton
+                android:id="@+id/bt_camera"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_camera"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/floating_button"/>
+
+            <ImageButton
+                android:id="@+id/bt_galeria"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_galeria"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/floating_button"
+                android:layout_toLeftOf="@id/bt_camera"/>
+        </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_txt_nome">
+
+            <EditText
+                android:id="@+id/txt_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_txt_endereco">
+
+            <EditText
+                android:id="@+id/txt_endereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Endereço"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_txt_telefone">
+
+            <EditText
+                android:id="@+id/txt_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Telefone"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_txt_email">
+
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/txt_linkedin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Endereço Linkedin"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_ligar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/ic_ligacao"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/floating_button_lig"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -10,13 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".contato.MainActivity">
+
+
             <intent-filter>
+
+
                 <action android:name="android.intent.action.MAIN" />
 
+
+
                 <category android:name="android.intent.category.LAUNCHER" />
+
+
             </intent-filter>
+
+
         </activity>
+
+
         <activity android:name=".contato.CadastroContatosActivity"></activity>
+        <provider
+            android:authorities="${applicationId}.provider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+
+        </provider>
     </application>
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
 </manifest>
